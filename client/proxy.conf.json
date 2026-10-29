@@ -1,0 +1,6 @@
+{
+  "/assets": {
+    "target": "http://localhost:3024",
+    "secure": false
+  }
+}

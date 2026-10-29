@@ -1,0 +1,117 @@
+:host {
+  position: fixed;
+  inset: 0;
+  display: block;
+}
+
+// No native scroll: the stage input owns every gesture. Station panels and carousels
+// (scroll containers) still scroll natively, the browser only allows it inside them.
+.stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  background: var(--color-space);
+}
+
+.stage-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.stage-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.btn-retry {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+// Lives in the top zone, kept clear of the open stations (STAGE.topZone).
+.hud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 1rem;
+  pointer-events: none;
+  font-size: 0.85rem;
+}
+
+.hud-link,
+.hud-counter {
+  pointer-events: auto;
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.hud-link {
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.hud-counter {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+}
+
+.hud-link:focus-visible,
+.btn-retry:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.hud-hint {
+  position: absolute;
+  // Under the open station's lower panel.
+  bottom: 0.4rem;
+  left: 50%;
+  margin: 0;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(5, 6, 15, 0.75);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  pointer-events: none;
+  transform: translateX(-50%);
+  animation: hint-pulse 2s ease-in-out infinite;
+}
+
+@keyframes hint-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

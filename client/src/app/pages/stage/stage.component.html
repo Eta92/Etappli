@@ -1,0 +1,38 @@
+<div class="stage" #surface>
+  <canvas class="stage-canvas" #canvas aria-hidden="true"></canvas>
+  <h1 class="visually-hidden">Etappli, les projets d'Eta</h1>
+
+  <main class="stage-stations">
+    @for (appli of projects(); track appli.name; let i = $index) {
+      <app-station
+        [appli]="appli"
+        [priority]="i === 0"
+        [open]="i === openIndex()"
+        [attr.inert]="i === currentIndex() ? null : ''"
+      />
+    }
+  </main>
+
+  @if (error()) {
+    <div class="stage-status" role="alert">
+      <p>Impossible de charger les projets.</p>
+      <button class="btn-retry" type="button" (click)="retry()">Réessayer</button>
+    </div>
+  } @else if (isLoading()) {
+    <p class="stage-status" aria-live="polite">Chargement des projets…</p>
+  }
+
+  <header class="hud">
+    <a class="hud-link" routerLink="/simple">Version simple</a>
+    @if (projects().length) {
+      <p class="hud-counter" aria-live="polite">
+        <span class="visually-hidden">Station</span>
+        {{ pad(currentIndex() + 1) }}<span aria-hidden="true"> / </span><span class="visually-hidden"> sur </span>{{ pad(projects().length) }}
+      </p>
+    }
+  </header>
+
+  @if (!hasTravelled() && projects().length > 1) {
+    <p class="hud-hint" aria-hidden="true">Faites défiler pour voyager</p>
+  }
+</div>

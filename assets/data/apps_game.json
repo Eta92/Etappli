@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Eta Tools",
+    "description": "Vous en voulez encore ? Alors le reste ça ne se joue pas mais il y a des trucs marrant voir même utiles",
+    "context": "Test de multiples façon de créer une interface et développement d'outils pour me rendre service dans mes autres activités",
+    "year": 0,
+    "hours": 0,
+    "images": 5,
+    "technos": []
+  },
+  {
+    "name": "Battle Cruiser",
+    "description": "Tout premier jeu réalisé ! C'est une reproduction du jeu astéroïde, à la différence près que votre vaisseau est très gros, que votre tourelle tourne lentement. Jusqu'où tiendrez vous ?",
+    "context": "Découverte de l'animation web 2D (canvas)",
+    "year": 2013,
+    "month": 5,
+    "hours": 10,
+    "images": 4,
+    "technos": [
+      {
+        "name": "HTML5",
+        "level": 1
+      },
+      {
+        "name": "JavaScript",
+        "level": 1
+      },
+      {
+        "name": "Canvas",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Gravi-Tetris",
+    "description": "Ajout de la gravité dans Tetris. Ici il faut faire des lignes ou des carrés de 4 blocs de la même couleur. La gravité viendra vite vous embêter en ramenant les blocs restants vers le centre.",
+    "context": "Maitrise du temps face aux deadlines non négociables",
+    "year": 2013,
+    "month": 11,
+    "hours": 15,
+    "images": 3,
+    "technos": [
+      {
+        "name": "HTML5",
+        "level": 2
+      },
+      {
+        "name": "CSS",
+        "level": 1
+      },
+      {
+        "name": "JavaScript",
+        "level": 2
+      },
+      {
+        "name": "Canvas",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Battle Fleet",
+    "description": "Ce jeu a été présenté pour un concours amateur à Bordeaux. L'objectif est de bien gérer la production des vaisseaux pour prendre l'avantage et détruire la base ennemie.",
+    "context": "Maîtrise des animations 2D et de la gestion du son.",
+    "year": 2014,
+    "month": 9,
+    "hours": 50,
+    "images": 4,
+    "technos": [
+      {
+        "name": "HTML5",
+        "level": 2
+      },
+      {
+        "name": "CSS",
+        "level": 2
+      },
+      {
+        "name": "JavaScript",
+        "level": 3
+      },
+      {
+        "name": "Canvas",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Exo Commander",
+    "description": "Première tentative de vrai jeu. Le concept est de gérer une civilisation dans la colonisation de la galaxie. Ce jeu se veut hautement réaliste, se basant sur les équations physique et de notre connaissance des étoiles. Le projet a été abandonné suite à de nombreux problèmes techniques.",
+    "context": "Maîtrise des animations 3D et des shaders. Gestion d'une grosse base de données relationnelle. Invention de procédés pour donner l'illusion d'un temps réel à partir de données statiques.",
+    "year": 2015,
+    "month": 7,
+    "hours": 800,
+    "images": 5,
+    "technos": [
+      {
+        "name": "JavaScript",
+        "level": 4
+      },
+      {
+        "name": "Three.js",
+        "level": 4
+      },
+      {
+        "name": "MySQL",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "AXA-O-AYA",
+    "description": "Ce jeu a été réalisé lors de la GlobalGameJam 2017 avec deux amis en 48h. Nous y avons présenté un jeu de pilotage spatial où 4 joueurs peuvent évoluer en même temps depuis le même ordinateur. L'objectif est de faire le tour de la planète sans heurter un asteroïde.",
+    "context": "Répartition des tâches en temps réel. Maîtrise des outils de contrôle de version. Résistance accrue au manque de sommeil.",
+    "year": 2017,
+    "month": 1,
+    "hours": 40,
+    "images": 3,
+    "technos": [
+      {
+        "name": "JavaScript",
+        "level": 3
+      },
+      {
+        "name": "Three.js",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Red-vs-Blue",
+    "description": "Jeu de conquête de territoire en ligne style RPG a 25 contre 25. Choisissez parmi 6 classes et utilisez vos armes et parchemins pour repousser les ennemis jusqu'à pendre leur forteresse. Serez vous capable de renverser le cours de la bataille ?",
+    "context": "Gestion avancée de la latence avec action immédiate et correction serveur, création d'un outil de création de carte et d'animations, intégration de NPCs un peu débiles",
+    "year": 2018,
+    "month": 11,
+    "hours": 500,
+    "images": 5,
+    "technos": [
+      {
+        "name": "HTML5",
+        "level": 3
+      },
+      {
+        "name": "CSS",
+        "level": 3
+      },
+      {
+        "name": "JavaScript",
+        "level": 5
+      },
+      {
+        "name": "Canvas",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "name": "Power Bounce",
+    "description": "Casse brique de folie avec 6 armes, 26 bonus, 8 ennemies et 8 sentinels ! Profitez bien du marché entre deux niveaux. Dispose d'un mode coop et d'un mode speed run. Saurez vous vous adapter a toutes les surprises ?",
+    "context": "Premier jeu mis en ligne sur une grosse platforme (12000 parties sur Armor Games). Travail important sur les effets visuels. Intégration de l'API de Twitch pour permettre au chat d'intervenir sur les bonus / malus du jeu",
+    "year": 2019,
+    "month": 3,
+    "hours": 300,
+    "images": 5,
+    "technos": [
+      {
+        "name": "HTML5",
+        "level": 4
+      },
+      {
+        "name": "JavaScript",
+        "level": 4
+      },
+      {
+        "name": "Canvas",
+        "level": 5
+      }
+    ]
+  }
+]

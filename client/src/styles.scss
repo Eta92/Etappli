@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Placeholder space palette: the visual style is still an open question (docs/DESIGN.md §8).
+:root {
+  --color-space: #05060f;
+  --color-panel: #0f1428;
+  --color-panel-border: #2a3360;
+  --color-text: #e8ecff;
+  --color-text-muted: #a3acd6;
+  --color-accent: #7cc4ff;
+  --color-accent-dim: #33406e;
+
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; // the station list owns the scroll
+  background: var(--color-space);
+  color: var(--color-text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}

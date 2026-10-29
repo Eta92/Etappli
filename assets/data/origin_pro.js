@@ -1,0 +1,55 @@
+M.app_list = [
+  {
+    name: 'Eta Tools',
+    date: '-',
+    time: '-',
+    link: 'http://www.etappli.fr/tools',
+    hide: false,
+    img: 5,
+    long: 'Vous en voulez encore ? Alors le reste ça ne se joue pas mais il y a des trucs marrant voir même utiles',
+    skills: "Test de multiples façon de créer une interface et développement d'outils pour me rendre service dans mes autres activités",
+  },
+  {
+    name: 'Eta Games',
+    date: '-',
+    time: '-',
+    link: 'http://www.etappli.fr/games',
+    hide: false,
+    img: 5,
+    long: "Intéressé par le gaming ? Testez mes créations maison, c'est pas encore très aboutis, mais beaucoup de pistes on été explorées",
+    skills:
+      "Compétences avancées en rendu 2D via canvas et 3D via three.js, résolution de nombreux défis techniques et création d'algorithmes complexes",
+  },
+  {
+    name: 'ETAPPS',
+    date: '02/2019',
+    time: '1 mois',
+    link: '',
+    hide: false,
+    img: 3,
+    long: "Cette page web a été créé pour afficher l'ensemble de mes créations (jeux, outils, et prototypes). C'est un peu old school mais j'aime bien",
+    skills:
+      "Codage d'un framework maison limité mais très instructif. Couverture partiel de consultation sur téléphone, compilation de toutes technologies que j'ai pu tester.",
+  },
+  {
+    name: 'Remote Station',
+    date: '01/2018',
+    time: '2 mois',
+    link: '',
+    img: 4,
+    hide: false,
+    long: "Refonte complete d'un site web sur de l'équipement embarqué avec des technologie modernes. Permet la consulation de l'état de santé, de lancement d'alertes, et de mettre a jour le systeme a distance",
+    skills:
+      "Montée en compétence sur Angular 4, création d'API pour intéragir avec les données bas niveau, développement d'outils graphiques uniques sous canvas",
+  },
+  {
+    name: 'Electronic CV Editor',
+    date: '2021',
+    time: '1 semaine',
+    link: '/CV',
+    img: 3,
+    hide: false,
+    long: "Outil qui m'a permis de créer mon CV personnalisé car je n'ai pas trouvé de logiciel permettant autant de complexité et de précision. Pour éviter les surcouts deja important de développement, le texte est codé en dur",
+    skills: "Recombinaison de mon outil d'édition de carte et celui de génération d'images",
+  },
+];

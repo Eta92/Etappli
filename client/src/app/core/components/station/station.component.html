@@ -1,0 +1,71 @@
+<header class="station-title" #title>
+  <h2 [id]="titleId()">{{ appli().name }}</h2>
+  <p class="station-meta">
+    <span>{{ dateLabel() }}</span>
+    @if (appli().hours) {
+      <span class="station-hours">{{ appli().hours }} h</span>
+    }
+  </p>
+</header>
+
+<div class="station-gallery" #gallery>
+  <div
+    class="gallery-scroller"
+    #scroller
+    role="region"
+    tabindex="0"
+    [attr.aria-label]="'Captures de ' + appli().name"
+    (scroll)="onGalleryScroll(scroller)"
+  >
+    @for (src of images(); track src; let i = $index) {
+      <div class="slide">
+        <img
+          [ngSrc]="src"
+          fill
+          [priority]="priority() && i === 0"
+          [alt]="appli().name + ', capture ' + (i + 1) + ' sur ' + images().length"
+        />
+      </div>
+    }
+  </div>
+  @if (images().length > 1) {
+    <div class="gallery-dots" aria-hidden="true">
+      @for (src of images(); track src; let i = $index) {
+        <span class="dot" [class.active]="i === currentImage()"></span>
+      }
+    </div>
+  }
+</div>
+
+<section class="station-panel" #details data-stage-scrollable aria-label="Description">
+  <div class="panel-content">
+    <p class="panel-text">
+      <span class="panel-label">Description</span>
+      {{ appli().description }}
+    </p>
+  </div>
+</section>
+
+<section class="station-panel" #extra data-stage-scrollable aria-label="Ce que j'y ai appris">
+  <div class="panel-content">
+    <p class="panel-text panel-context">
+      <span class="panel-label">Ce que j'y ai appris</span>
+      {{ appli().context }}
+    </p>
+
+    @if (appli().technos.length) {
+      <ul class="technos" aria-label="Technologies">
+        @for (techno of appli().technos; track techno.name) {
+          <li class="techno">
+            <span class="techno-name">{{ techno.name }}</span>
+            <span class="techno-level" role="img" [attr.aria-label]="'niveau ' + techno.level + ' sur ' + maxLevel">
+              @for (level of levels; track level) {
+                <span class="techno-dot" [class.filled]="level <= techno.level"></span>
+              }
+            </span>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<main class="stations">
+  <h1 class="visually-hidden">Etappli, les projets d'Eta</h1>
+  <a class="link-stage" routerLink="/">Version animée</a>
+
+  @if (error()) {
+    <section class="station station-status" role="alert">
+      <p>Impossible de charger les projets.</p>
+      <button class="btn-retry" type="button" (click)="retry()">Réessayer</button>
+    </section>
+  } @else if (isLoading()) {
+    <section class="station station-status" aria-live="polite">
+      <p>Chargement des projets…</p>
+    </section>
+  } @else {
+    @for (appli of projects(); track appli.name; let first = $first) {
+      <section class="station">
+        <app-project-frame [appli]="appli" [priority]="first" />
+      </section>
+    } @empty {
+      <section class="station station-status">
+        <p>Aucun projet pour le moment.</p>
+      </section>
+    }
+  }
+</main>

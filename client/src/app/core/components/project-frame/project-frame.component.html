@@ -1,0 +1,57 @@
+<article class="frame" data-stage-scrollable [attr.aria-labelledby]="titleId()">
+  <header class="frame-header">
+    <h2 class="frame-title" [id]="titleId()">{{ appli().name }}</h2>
+    <p class="frame-meta">
+      <span>{{ dateLabel() }}</span>
+      @if (appli().hours) {
+        <span aria-hidden="true">·</span>
+        <span>{{ appli().hours }} h</span>
+      }
+    </p>
+  </header>
+
+  <div
+    class="frame-gallery"
+    role="region"
+    tabindex="0"
+    [attr.aria-label]="'Captures de ' + appli().name"
+  >
+    @for (src of images(); track src; let i = $index) {
+      <img
+        class="frame-image"
+        [ngSrc]="src"
+        width="960"
+        height="480"
+        [priority]="priority() && i === 0"
+        [alt]="appli().name + ', capture ' + (i + 1) + ' sur ' + images().length"
+      />
+    }
+  </div>
+
+  <div class="frame-details">
+    <p class="frame-description">{{ appli().description }}</p>
+    <p class="frame-context">
+      <span class="frame-label">Ce que j'y ai appris</span>
+      {{ appli().context }}
+    </p>
+
+    @if (appli().technos.length) {
+      <ul class="frame-technos" aria-label="Technologies">
+        @for (techno of appli().technos; track techno.name) {
+          <li class="techno">
+            <span class="techno-name">{{ techno.name }}</span>
+            <span
+              class="techno-level"
+              role="img"
+              [attr.aria-label]="'niveau ' + techno.level + ' sur ' + maxLevel"
+            >
+              @for (level of levels; track level) {
+                <span class="techno-dot" [class.filled]="level <= techno.level"></span>
+              }
+            </span>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</article>
